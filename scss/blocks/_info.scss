@@ -1,0 +1,85 @@
+.info {
+  position: relative;
+  &__container {
+    position: relative;
+    z-index: 99;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e7eaeb;
+    border-radius: 21px;
+    padding: 50px 125px;
+    @include tablet-small {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  }
+
+  &__students {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      max-height: 112px;
+      height: 100%;
+      background-color: #e7eaeb;
+    }
+    @include tablet-small {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include text($ffAdd, 700, 40px, 50px, $darkBlue);
+  }
+
+  &__desc {
+    text-align: center;
+    @include text($ffMain, 400, 16px, 20px, $darkGreyBlue);
+  }
+
+  &__lectures {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      max-height: 112px;
+      height: 100%;
+      background-color: #e7eaeb;
+    }
+    @include tablet-small {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .circle {
+    position: absolute;
+    background: linear-gradient(44.11deg, #cd10ff 15.75%, #9f06ff 84.63%);
+    width: 288px;
+    height: 288px;
+    border-radius: 50%;
+    left: -46px;
+  }
+  .circle-small {
+    position: absolute;
+    background: linear-gradient(35.71deg, #FFD7A9 9.11%, #FFAE70 71.64%);
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    left: 156px;
+    top: 120%;
+  }
+}
+

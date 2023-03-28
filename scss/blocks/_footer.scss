@@ -1,0 +1,63 @@
+.footer {
+
+  &__container {
+  }
+
+  &__logo {
+    img {
+        max-width: 150px;
+    }
+    
+  }
+
+  &__input {
+    max-width: 890px;
+  }
+  &__search {
+    display: flex;
+  }
+}
+.container {
+}
+.field {
+  max-width: 890px;
+  flex-grow: 1;
+  background: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0501257);
+  border-radius: 33px;
+
+  &_input {
+    padding: 23px 0;
+    z-index: 99;
+    max-width: 735px;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    background-color: transparent;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #4f596a;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  &__btn {
+
+  }
+}
+.footer-list {
+  &__menu {
+  }
+
+  &__contact {
+  }
+
+  &__product {
+  }
+}
