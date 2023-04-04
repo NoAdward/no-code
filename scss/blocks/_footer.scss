@@ -1,20 +1,53 @@
 .footer {
-
+  &::before {
+    content: "";
+    background: $purpleGrad;
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    padding: 39px 54px 41px 46px;
+    border-radius: 21px;
+    z-index: -1;
+  }
   &__container {
   }
 
   &__logo {
+    display: flex;
+    justify-content: center;
     img {
-        max-width: 150px;
+      max-width: 150px;
     }
-    
   }
 
   &__input {
     max-width: 890px;
+    padding: 8px;
+    flex-grow: 1;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0501257);
+    border-radius: 33px;
+    align-items: center;
+    display: flex;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      box-shadow: none;
+      
+    }
   }
   &__search {
     display: flex;
+    gap: 80px;
+    margin-bottom: 50px;
+    padding-top: 63px;
+    @include tablet-small {
+      flex-direction: 0;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 .container {
@@ -23,17 +56,70 @@
   max-width: 890px;
   flex-grow: 1;
   background: #ffffff;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0501257);
   border-radius: 33px;
+  @include tablet-small {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+     background: none;
+     box-shadow: none;
+  }
 
   &_input {
-    padding: 23px 0;
-    z-index: 99;
     max-width: 735px;
     width: 100%;
-    padding: 10px;
     border: 0;
     background-color: transparent;
+    /* identical to box height */
+
+    color: #4f596a;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    padding-left: 40px;
+    @include text($ffMain, 400, 16px, 20px, $darkGreyBlue);
+    &::placeholder {
+      padding: 23px 0;
+    }
+  }
+
+  &__btn {
+    background: linear-gradient(44.11deg, #cd10ff 15.75%, #9f06ff 84.63%);
+    border-radius: 33px;
+    padding: 15px 30px;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #ffffff;
+  }
+}
+.footer-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  @include tablet-small {
+    a:not(:first-child) {
+      display: none;
+    }
+  }
+  &__menu {
+    a:first-child {
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+
+      color: #001a49;
+    }
+
+    display: flex;
+    flex-direction: column;
     font-family: "Mulish";
     font-style: normal;
     font-weight: 400;
@@ -42,22 +128,57 @@
     /* identical to box height */
 
     color: #4f596a;
-
-    mix-blend-mode: normal;
-    opacity: 0.5;
-  }
-
-  &__btn {
-
-  }
-}
-.footer-list {
-  &__menu {
   }
 
   &__contact {
+    display: flex;
+    flex-direction: column;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #4f596a;
+    a:first-child {
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+
+      color: #001a49;
+    }
   }
 
   &__product {
+    display: flex;
+    flex-direction: column;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #4f596a;
+    a:first-child {
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+
+      color: #001a49;
+    }
+  }
+}
+
+@include tablet-small {
+  .footer-list__menu:not(:first-child) a {
+    display: none;
   }
 }

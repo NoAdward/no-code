@@ -43,6 +43,7 @@
 			}
 			&._active {
 				transform: translateX(0);
+				z-index: 99;
 			}
 
 			.nav__a {
